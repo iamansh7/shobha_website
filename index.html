@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shobha Pustakalay &amp; Stationery – Bajrang Nagar, Nagpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── DESIGN TOKENS ───────────────────────────────────────────── */
+:root {
+  --ink:        #0f1c2e;
+  --ink-mid:    #243347;
+  --ink-soft:   #4a6074;
+  --ink-muted:  #8fa3b6;
+  --sapphire:   #1a4f8a;
+  --sapphire-m: #2563a8;
+  --sapphire-l: #4e88cc;
+  --sky:        #e8f2fc;
+  --sky-pale:   #f4f9fe;
+  --amber:      #b87c2a;
+  --amber-l:    #f0d08a;
+  --amber-pale: #fdf6e8;
+  --white:      #ffffff;
+  --canvas:     #f7f9fc;
+  --canvas-2:   #eef2f8;
+  --line:       #dce5ef;
+  --line-mid:   #c4d0de;
+  --red:        #c94040;
+  --green:      #1f9e5f;
+  --r-xs:  5px;
+  --r-sm:  10px;
+  --r-md:  16px;
+  --r-lg:  24px;
+  --r-xl:  32px;
+  --r-2xl: 48px;
+  --sh-xs: 0 1px 3px rgba(15,28,46,.04), 0 1px 6px rgba(15,28,46,.04);
+  --sh-sm: 0 2px 8px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.05);
+  --sh-md: 0 4px 20px rgba(15,28,46,.08), 0 8px 40px rgba(15,28,46,.06);
+  --sh-lg: 0 12px 48px rgba(15,28,46,.11), 0 4px 16px rgba(15,28,46,.06);
+  --sh-xl: 0 24px 72px rgba(15,28,46,.14);
+  --mw: 1140px;
+  --nh: 68px;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:var(--font-sans);color:var(--ink);background:var(--white);overflow-x:hidden;line-height:1.65;font-size:15px}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ── UTILITY ─────────────────────────────────────────────────── */
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 32px}
+section{padding:88px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sapphire);margin-bottom:14px}
+.eyebrow::before{content:'';display:block;width:18px;height:2px;background:var(--sapphire);border-radius:2px;flex-shrink:0}
+.heading{font-family:var(--font-serif);font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--ink);line-height:1.18;margin-bottom:16px;letter-spacing:-.02em}
+.sub-heading{font-family:var(--font-serif);font-size:clamp(22px,2.8vw,32px);font-weight:600;color:var(--ink);line-height:1.25;margin-bottom:12px;letter-spacing:-.015em}
+.lead{font-size:15.5px;color:var(--ink-soft);line-height:1.85;max-width:600px;margin-bottom:48px;font-weight:400}
+.divider{width:48px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--sapphire),var(--amber));margin-bottom:28px}
+.bg-white{background:var(--white)}
+.bg-canvas{background:var(--canvas)}
+.bg-sky{background:var(--sky-pale)}
+.text-center{text-align:center}
+.text-center .lead{margin-left:auto;margin-right:auto}
+.text-center .divider{margin-left:auto;margin-right:auto}
+
+/* ── ANIMATIONS ──────────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+
+/* ── NAVBAR ──────────────────────────────────────────────────── */
+.site-nav{
+  position:fixed;top:0;left:0;width:100%;z-index:200;
+  height:var(--nh);
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid rgba(220,229,239,.7);
+  backdrop-filter:blur(20px) saturate(1.4);
+  -webkit-backdrop-filter:blur(20px) saturate(1.4);
+}
+.nav-inner{max-width:var(--mw);margin:0 auto;padding:0 32px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-brand-icon{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--sapphire) 100%);
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+  box-shadow:0 3px 10px rgba(26,79,138,.3);
+}
+.nav-brand-text{display:flex;flex-direction:column}
+.nav-brand-name{font-family:var(--font-serif);font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.1;letter-spacing:-.01em}
+.nav-brand-sub{font-size:10px;color:var(--ink-muted);letter-spacing:.06em;text-transform:uppercase;font-weight:500;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:1px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);padding:7px 13px;border-radius:var(--r-sm);transition:background .18s,color .18s}
+.nav-links a:hover,.nav-links a.active{background:var(--sky);color:var(--sapphire)}
+.nav-cta{
+  font-size:12.5px !important;font-weight:600 !important;
+  color:var(--white) !important;
+  background:linear-gradient(135deg,var(--sapphire) 0%,var(--sapphire-m) 100%) !important;
+  padding:9px 20px !important;border-radius:var(--r-sm) !important;
+  box-shadow:0 3px 12px rgba(26,79,138,.28) !important;
+  transition:transform .18s,box-shadow .18s !important;
+  letter-spacing:.02em !important;
+}
+.nav-cta:hover{transform:translateY(-1px) !important;box-shadow:0 6px 20px rgba(26,79,138,.35) !important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;border-radius:var(--r-xs);flex-shrink:0;transition:background .15s}
+.nav-toggle:hover{background:var(--canvas)}
+.nav-toggle span{display:block;width:21px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.nav-drawer{
+  display:none;position:fixed;top:var(--nh);left:0;width:100%;
+  background:var(--white);border-bottom:1px solid var(--line);
+  box-shadow:var(--sh-lg);z-index:210;padding:8px 0 20px;
+}
+.nav-drawer.open{display:block}
+.nav-drawer a{
+  display:flex;align-items:center;padding:13px 28px;font-size:14px;
+  font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--canvas-2);
+  transition:background .15s,color .15s;
+}
+.nav-drawer a:last-child{border-bottom:none}
+.nav-drawer a:hover{background:var(--sky);color:var(--sapphire)}
+.nav-progress{position:fixed;top:var(--nh);left:0;width:100%;height:2.5px;background:linear-gradient(90deg,var(--sapphire) 0%,var(--sapphire-l) 45%,var(--amber) 75%,var(--amber-l) 100%);z-index:199;transform-origin:left;transform:scaleX(0);transition:transform .1s linear}
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  padding:calc(var(--nh) + 64px) 32px 80px;
+  background:var(--canvas);
+  background-image:
+    radial-gradient(ellipse 70% 60% at 85% 15%, rgba(26,79,138,.08) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 10% 90%, rgba(184,124,42,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,.6) 0%, transparent 70%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--line)}
+/* decorative dots */
+.hero::before{
+  content:'';position:absolute;top:60px;right:-40px;
+  width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle, rgba(26,79,138,.05) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{max-width:var(--mw);margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:600;color:var(--sapphire);
+  background:var(--sky);border:1px solid rgba(26,79,138,.14);
+  border-radius:100px;padding:6px 16px;margin-bottom:30px;
+  letter-spacing:.03em;animation:fadeUp .5s ease .05s both;
+}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--sapphire);animation:pulse 2s ease infinite}
+.hero-h1{
+  font-family:var(--font-serif);
+  font-size:clamp(36px,5.2vw,62px);
+  font-weight:900;color:var(--ink);
+  line-height:1.08;margin-bottom:24px;
+  letter-spacing:-.03em;
+  animation:fadeUp .55s ease .12s both;
+}
+.hero-h1 em{font-style:italic;color:var(--sapphire);font-weight:700}
+.hero-h1 span.gold{color:var(--amber)}
+.hero-p{
+  font-size:16.5px;color:var(--ink-soft);
+  line-height:1.85;max-width:440px;
+  margin-bottom:36px;
+  animation:fadeUp .55s ease .22s both;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;animation:fadeUp .55s ease .3s both}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 28px;font-size:14px;font-weight:600;
+  color:var(--white);
+  background:linear-gradient(135deg,var(--sapphire) 0%,var(--sapphire-m) 100%);
+  border-radius:var(--r-sm);
+  box-shadow:0 4px 18px rgba(26,79,138,.32);
+  letter-spacing:.02em;transition:transform .2s,box-shadow .2s;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,79,138,.38)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;font-size:14px;font-weight:600;
+  color:var(--ink);background:var(--white);
+  border:1px solid var(--line-mid);border-radius:var(--r-sm);
+  box-shadow:var(--sh-xs);
+  letter-spacing:.02em;transition:border-color .2s,box-shadow .2s,transform .2s;
+}
+.btn-secondary:hover{border-color:var(--sapphire-l);box-shadow:var(--sh-sm);transform:translateY(-1px)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;animation:fadeUp .55s ease .38s both}
+.chip{
+  font-size:12px;font-weight:500;color:var(--ink-soft);
+  background:var(--white);border:1px solid var(--line);
+  border-radius:100px;padding:6px 14px;
+  box-shadow:var(--sh-xs);transition:border-color .2s,color .2s,transform .18s;
+}
+.chip:hover{border-color:var(--sapphire-l);color:var(--sapphire);transform:translateY(-1px)}
+
+/* hero right panel */
+.hero-panel{display:flex;flex-direction:column;gap:16px;animation:fadeUp .6s ease .42s both}
+.hero-card-main{
+  background:var(--white);border-radius:var(--r-xl);
+  border:1px solid var(--line);overflow:hidden;box-shadow:var(--sh-lg);
+}
+.hero-card-banner{
+  height:200px;
+  background:linear-gradient(145deg,#c8e0f6 0%,#d8ecfa 40%,#f7e9ca 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+}
+.hero-card-banner::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 28px,rgba(26,79,138,.03) 28px,rgba(26,79,138,.03) 29px);
+}
+.hero-card-emoji{font-size:48px;position:relative;filter:drop-shadow(0 4px 10px rgba(0,0,0,.12))}
+.hero-card-label{
+  font-family:var(--font-serif);font-size:16px;font-weight:600;
+  color:var(--ink);letter-spacing:.02em;position:relative;
+}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat-item{padding:20px 10px;text-align:center;border-right:1px solid var(--line)}
+.stat-item:last-child{border-right:none}
+.stat-n{font-family:var(--font-serif);font-size:26px;font-weight:800;color:var(--sapphire);line-height:1;letter-spacing:-.02em}
+.stat-l{font-size:11px;color:var(--ink-muted);font-weight:500;margin-top:4px;letter-spacing:.03em}
+
+/* trust bar below hero stats */
+.hero-trust-bar{
+  display:flex;align-items:center;gap:16px;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--ink-mid) 100%);
+  padding:16px 22px;border-radius:var(--r-lg);
+}
+.trust-item{display:flex;align-items:center;gap:8px;flex:1}
+.trust-icon{font-size:18px;flex-shrink:0}
+.trust-text{font-size:12px;color:rgba(255,255,255,.8);line-height:1.3}
+.trust-text strong{color:#fff;font-weight:600;display:block;font-size:13px}
+.trust-divider{width:1px;height:32px;background:rgba(255,255,255,.12)}
+
+/* ── SECTION HEADER UTILITY ──────────────────────────────────── */
+.sec-header{margin-bottom:48px}
+.sec-header.center{text-align:center}
+.sec-header.center .eyebrow{justify-content:center}
+.sec-header.center .eyebrow::before{display:none}
+.sec-header.center .divider{margin:0 auto 0}
+
+/* ── PRODUCTS ────────────────────────────────────────────────── */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product-card{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:30px 20px 24px;
+  text-align:center;box-shadow:var(--sh-xs);
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s,border-color .22s;
+  display:flex;flex-direction:column;align-items:center;
+  position:relative;overflow:hidden;
+}
+.product-card::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(180deg,transparent 60%,rgba(26,79,138,.02) 100%);
+  pointer-events:none;
+}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--sapphire-l)}
+.product-icon-wrap{
+  width:64px;height:64px;border-radius:18px;
+  margin:0 auto 16px;display:flex;align-items:center;justify-content:center;
+  font-size:28px;flex-shrink:0;
+  box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+.product-name{font-family:var(--font-serif);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2}
+.product-desc{font-size:12.5px;color:var(--ink-muted);line-height:1.5}
+
+/* ── BRANDS ──────────────────────────────────────────────────── */
+.brands-intro{font-size:14.5px;color:var(--ink-soft);max-width:520px;line-height:1.7;margin-bottom:32px}
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.brand-card{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:24px 14px 20px;
+  text-align:center;box-shadow:var(--sh-xs);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .2s;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px;
+}
+.brand-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md);border-color:var(--sapphire-l)}
+.brand-icon{font-size:28px;margin-bottom:10px}
+.brand-name{font-family:var(--font-serif);font-size:14px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:3px}
+.brand-sub{font-size:11.5px;color:var(--ink-muted);line-height:1.4}
+
+/* ── PUBLICATIONS ────────────────────────────────────────────── */
+.pub-board-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.pub-board-card{
+  background:var(--white);border-radius:var(--r-lg);
+  border:1px solid var(--line);padding:22px 20px;
+  box-shadow:var(--sh-xs);
+  display:flex;flex-direction:column;gap:6px;
+  border-top:3px solid var(--sapphire);
+  transition:transform .22s,box-shadow .22s;
+}
+.pub-board-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+.pub-board-icon{font-size:22px;margin-bottom:4px}
+.pub-board-title{font-family:var(--font-serif);font-size:15px;font-weight:700;color:var(--ink)}
+.pub-board-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.pub-sep{height:1px;background:var(--line);margin:36px 0}
+.pub-sub-label{
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:20px;
+}
+
+/* ── NAVNEET ─────────────────────────────────────────────────── */
+.navneet-wrap{
+  background:var(--white);border-radius:var(--r-2xl);
+  border:1px solid var(--line);padding:52px;
+  display:flex;align-items:flex-start;gap:44px;
+  box-shadow:var(--sh-lg);position:relative;overflow:hidden;
+}
+.navneet-wrap::before{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,79,138,.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.navneet-icon-box{
+  flex-shrink:0;width:92px;height:92px;border-radius:24px;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--sapphire) 100%);
+  display:flex;align-items:center;justify-content:center;font-size:40px;
+  box-shadow:0 8px 24px rgba(15,28,46,.22);
+}
+.navneet-body{flex:1;min-width:0}
+.navneet-body h3{font-family:var(--font-serif);font-size:30px;font-weight:800;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em}
+.navneet-body p{font-size:15.5px;color:var(--ink-soft);line-height:1.85;margin-bottom:24px;max-width:580px}
+.navneet-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.navneet-tag{
+  font-size:12px;font-weight:600;color:var(--sapphire);
+  background:var(--sky);border:1px solid rgba(26,79,138,.15);
+  border-radius:100px;padding:5px 14px;letter-spacing:.01em;
+}
+.dist-banner{
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--ink-mid) 100%);
+  border-radius:var(--r-md);padding:16px 22px;
+}
+.dist-banner span:first-child{font-size:22px;flex-shrink:0}
+.dist-banner p{font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.45;margin:0}
+.dist-banner strong{color:#fff;font-weight:700}
+
+/* ── LIBRARY ─────────────────────────────────────────────────── */
+.lib-gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;margin-bottom:44px}
+.lib-photo-wrap{position:relative;overflow:hidden;border-radius:var(--r-xl);box-shadow:var(--sh-md)}
+.lib-gallery-img{
+  width:100%;aspect-ratio:4/3;object-fit:contain;
+  background:var(--canvas-2);display:block;
+  transition:transform .4s ease;
+}
+.lib-photo-wrap:hover .lib-gallery-img{transform:scale(1.03)}
+.lib-gallery-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:12px 16px 14px;
+  background:linear-gradient(transparent,rgba(15,28,46,.62));
+  font-size:12px;font-weight:500;color:rgba(255,255,255,.9);
+  letter-spacing:.03em;
+}
+.lib-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.lib-features{display:flex;flex-direction:column;gap:14px;padding:28px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--sh-xs)}
+.lib-feat-item{display:flex;align-items:flex-start;gap:12px}
+.lib-feat-icon{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;margin-top:1px;
+}
+.lib-feat-text{font-size:14px;color:var(--ink-soft);line-height:1.55}
+.lib-timings-box{
+  background:linear-gradient(145deg,var(--ink) 0%,var(--ink-mid) 100%);
+  border-radius:var(--r-xl);padding:28px 30px;
+  display:flex;flex-direction:column;justify-content:center;
+  box-shadow:var(--sh-md);
+}
+.lib-timings-label{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-l);margin-bottom:18px}
+.lib-tc-row{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.lib-tc-row:last-child{border-bottom:none}
+.lib-tc-day{font-size:13.5px;font-weight:500;color:rgba(255,255,255,.75)}
+.lib-tc-time{
+  font-size:13px;font-weight:600;color:#fff;
+  background:rgba(184,124,42,.25);border:1px solid rgba(240,208,138,.35);
+  border-radius:100px;padding:4px 14px;white-space:nowrap;
+}
+
+/* ── ABOUT ───────────────────────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-visual{
+  height:400px;border-radius:var(--r-2xl);
+  background:linear-gradient(145deg,#c8e0f6 0%,#b8d4f0 45%,#f0e4c0 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  border:1px solid var(--line);position:relative;overflow:hidden;
+  box-shadow:var(--sh-md);
+}
+.about-visual::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 32px,rgba(26,79,138,.025) 32px,rgba(26,79,138,.025) 33px);
+}
+.about-visual-icon{font-size:60px;opacity:.45;position:relative;filter:drop-shadow(0 4px 12px rgba(0,0,0,.1))}
+.about-visual-caption{
+  font-family:var(--font-serif);font-size:15px;font-weight:600;
+  color:var(--sapphire);letter-spacing:.06em;font-style:italic;position:relative;opacity:.75;
+}
+.about-copy p{font-size:15.5px;color:var(--ink-soft);line-height:1.85;margin-bottom:18px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.pillar{
+  background:var(--canvas);border-radius:var(--r-md);
+  padding:18px 20px;border-left:3px solid var(--sapphire);
+  transition:border-color .2s,background .2s;
+}
+.pillar:hover{border-color:var(--amber);background:var(--amber-pale)}
+.pillar-t{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.pillar-b{font-size:12px;color:var(--ink-muted);line-height:1.5}
+
+/* ── TIMINGS ─────────────────────────────────────────────────── */
+.timings-card{
+  max-width:580px;margin:0 auto;
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-2xl);overflow:hidden;box-shadow:var(--sh-lg);
+}
+.timings-head{
+  background:linear-gradient(135deg,var(--ink) 0%,var(--ink-mid) 100%);
+  padding:24px 36px;display:flex;align-items:center;gap:14px;
+}
+.timings-head-icon{font-size:24px}
+.timings-head-title{font-family:var(--font-serif);font-size:21px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.t-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 36px;border-bottom:1px solid var(--canvas-2);
+  transition:background .15s;
+}
+.t-row:last-child{border-bottom:none}
+.t-row:hover{background:var(--sky-pale)}
+.t-day{font-size:14px;font-weight:500;color:var(--ink)}
+.t-time{
+  font-size:13px;font-weight:700;color:var(--sapphire);
+  background:var(--sky);border:1px solid rgba(26,79,138,.15);
+  border-radius:100px;padding:4px 16px;
+}
+.t-closed{
+  font-size:13px;font-weight:700;color:var(--red);
+  background:rgba(201,64,64,.06);border:1px solid rgba(201,64,64,.2);
+  border-radius:100px;padding:4px 16px;
+}
+
+/* ── CONTACT ─────────────────────────────────────────────────── */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-details{display:flex;flex-direction:column;gap:14px}
+.contact-card{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:18px 20px;
+  display:flex;align-items:flex-start;gap:16px;
+  box-shadow:var(--sh-xs);
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.contact-card:hover{border-color:var(--sapphire-l);transform:translateX(4px);box-shadow:var(--sh-sm)}
+.contact-icon{
+  width:42px;height:42px;border-radius:var(--r-sm);
+  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.contact-label{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:4px}
+.contact-value{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.5}
+.contact-link{color:var(--ink);transition:color .15s}
+.contact-link:hover{color:var(--sapphire)}
+.map-frame{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh-xs)}
+
+/* contact form */
+.contact-form{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-xl);padding:40px;box-shadow:var(--sh-md);
+}
+.form-title{font-family:var(--font-serif);font-size:24px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em}
+.form-sub{font-size:13.5px;color:var(--ink-muted);margin-bottom:28px;line-height:1.5}
+.wa-cta{
+  display:flex;align-items:center;gap:10px;
+  background:#25d366;border-radius:var(--r-md);
+  padding:13px 20px;margin-bottom:20px;
+  color:#fff;font-weight:600;font-size:14px;
+  box-shadow:0 4px 16px rgba(37,211,102,.32);
+  transition:transform .2s,box-shadow .2s;cursor:pointer;
+  text-decoration:none;
+}
+.wa-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.38)}
+.wa-cta-icon{font-size:20px}
+.wa-cta-text{line-height:1.3}
+.wa-cta-text small{font-size:11px;opacity:.85;font-weight:400;display:block;margin-top:1px}
+.form-or{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.form-or-line{flex:1;height:1px;background:var(--line)}
+.form-or-text{font-size:11px;font-weight:600;color:var(--ink-muted);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.field input,.field textarea{
+  font-family:var(--font-sans);font-size:14px;color:var(--ink);
+  background:var(--canvas);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:11px 14px;outline:none;
+  transition:border-color .18s,box-shadow .18s,background .18s;
+  resize:vertical;width:100%;
+}
+.field input:focus,.field textarea:focus{border-color:var(--sapphire);box-shadow:0 0 0 3px rgba(26,79,138,.1);background:#fff}
+.field textarea{min-height:100px}
+.form-submit{
+  width:100%;margin-top:8px;padding:14px 24px;
+  background:linear-gradient(135deg,var(--sapphire) 0%,var(--sapphire-m) 100%);
+  color:#fff;font-family:var(--font-sans);font-size:14px;font-weight:700;
+  letter-spacing:.03em;border:none;border-radius:var(--r-sm);cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 4px 16px rgba(26,79,138,.28);
+}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,79,138,.36)}
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+.site-footer{
+  background:linear-gradient(155deg,var(--ink) 0%,#0a1525 100%);
+  color:rgba(255,255,255,.5);padding:64px 0 0;
+}
+.footer-inner{max-width:var(--mw);margin:0 auto;padding:0 32px}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;
+  padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07);
+}
+.footer-brand-icon{
+  width:40px;height:40px;border-radius:11px;
+  background:linear-gradient(135deg,var(--sapphire) 0%,var(--sapphire-m) 100%);
+  display:flex;align-items:center;justify-content:center;font-size:18px;
+  margin-bottom:14px;box-shadow:0 4px 12px rgba(26,79,138,.3);
+}
+.footer-brand-name{font-family:var(--font-serif);font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em}
+.footer-brand-copy{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.42)}
+.footer-col-title{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-l);margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:13.5px;color:rgba(255,255,255,.45);transition:color .18s;letter-spacing:.01em}
+.footer-col ul a:hover{color:#fff}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;padding:22px 0;font-size:12.5px;color:rgba(255,255,255,.3);
+}
+
+/* ── INFO BAR (desktop) ──────────────────────────────────────── */
+.info-bar{
+  position:fixed;bottom:0;left:0;right:0;height:42px;
+  background:rgba(15,28,46,.97);backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  gap:28px;z-index:150;border-top:1px solid rgba(255,255,255,.05);
+}
+.ib-item{font-size:12px;font-weight:500;color:rgba(255,255,255,.68);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.ib-item a{color:inherit;transition:color .15s}
+.ib-item a:hover{color:#fff}
+.ib-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.2)}
+
+/* ── WHATSAPP FAB ────────────────────────────────────────────── */
+.wa-fab{
+  position:fixed;bottom:60px;right:22px;z-index:300;
+  width:54px;height:54px;border-radius:50%;background:#25d366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.45);
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s;
+  text-decoration:none;
+}
+.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.55)}
+.wa-fab svg{width:26px;height:26px;fill:#fff}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media(max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:52px}
+  .hero-text{align-items:center;text-align:center}
+  .hero-actions{justify-content:center}
+  .hero-chips{justify-content:center}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-visual{height:260px}
+  .contact-wrap{grid-template-columns:1fr;gap:36px}
+  .navneet-wrap{flex-direction:column;gap:28px}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-grid{grid-template-columns:repeat(3,1fr)}
+  .pub-board-cards{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:768px){
+  :root{--nh:60px}
+  .nav-links,.nav-cta{display:none !important}
+  .nav-toggle{display:flex}
+  section{padding:64px 0}
+  .hero{padding:calc(var(--nh) + 48px) 20px 64px}
+  .wrap{padding:0 20px}
+  .info-bar{display:none}
+  .pillars{grid-template-columns:1fr}
+  .form-row-2{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .navneet-wrap{padding:32px 24px}
+  .contact-form{padding:28px 22px}
+  .lib-info-grid{grid-template-columns:1fr}
+  .hero-panel{display:none}
+}
+@media(max-width:640px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-grid{grid-template-columns:repeat(2,1fr)}
+  .pub-board-cards{grid-template-columns:1fr}
+  .lib-gallery{grid-template-columns:1fr;gap:14px}
+  .timings-head{padding:18px 24px}
+  .t-row{padding:14px 24px}
+  .footer-bottom{flex-direction:column;text-align:center;gap:6px}
+  .trust-item:nth-child(2n+2){display:none}
+  .trust-divider:nth-child(2n+3){display:none}
+  .hero-trust-bar{flex-direction:column;gap:12px}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:clamp(30px,9vw,44px)}
+  .stat-n{font-size:22px}
+  .wa-fab{bottom:14px;right:14px;width:50px;height:50px}
+  .wa-fab svg{width:24px;height:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <div class="nav-brand-icon">📚</div>
+      <div class="nav-brand-text">
+        <div class="nav-brand-name">Shobha Pustakalay</div>
+        <div class="nav-brand-sub">&amp; Stationery · Nagpur</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#stationery-brands">Brands</a></li>
+      <li><a href="#publication">Publications</a></li>
+      <li><a href="#navneet">Navneet</a></li>
+      <li><a href="#library">Library</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#timings">Timings</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-progress" id="navProgress"></div>
+<div class="nav-drawer" id="navDrawer">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#stationery-brands">Brands</a>
+  <a href="#publication">Publications</a>
+  <a href="#navneet">Navneet</a>
+  <a href="#library">Library</a>
+  <a href="#about">About</a>
+  <a href="#timings">Timings</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Bajrang Nagar, Manewada, Nagpur
+      </div>
+      <h1 class="hero-h1">Your Trusted<br><em>Study Partner</em><br>Since Day One</h1>
+      <p class="hero-p">Everything a student needs — notebooks, pens, stationery, Navneet books, and a calm library space — all in one place at Shobha Pustakalay.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/919373106365" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a href="#products" class="btn-secondary">Explore Products</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip">📓 Notebooks</span>
+        <span class="chip">✏️ Stationery</span>
+        <span class="chip">📖 Navneet Books</span>
+        <span class="chip">🏛 Library</span>
+        <span class="chip">🎨 Art &amp; Craft</span>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hero-card-main">
+        <div class="hero-card-banner">
+          <div class="hero-card-emoji">🛍️</div>
+          <div class="hero-card-label">Premium Stationery Store</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-n">500+</div><div class="stat-l">Products</div></div>
+          <div class="stat-item"><div class="stat-n">10+</div><div class="stat-l">Years Trust</div></div>
+          <div class="stat-item"><div class="stat-n">∞</div><div class="stat-l">Happy Students</div></div>
+        </div>
+      </div>
+      <div class="hero-trust-bar">
+        <div class="trust-item">
+          <div class="trust-icon">🏅</div>
+          <div class="trust-text"><strong>Official Distributor</strong>Navneet &amp; Major Brands</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-icon">🏫</div>
+          <div class="trust-text"><strong>300+ Schools</strong>Supplied across Nagpur</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <div class="trust-icon">📚</div>
+          <div class="trust-text"><strong>Library Open</strong>7AM – 10:30PM Daily</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="bg-canvas">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="heading">Our Product Categories</h2>
+      <div class="divider"></div>
+      <p class="lead">Carefully curated stationery essentials designed to support every student's academic journey.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#daeaf8,#b8d4f2)">📓</div>
+        <div class="product-name">Notebooks</div>
+        <div class="product-desc">All sizes &amp; ruling types</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#faefd4,#f0d47a)">✏️</div>
+        <div class="product-name">Pens</div>
+        <div class="product-desc">Ball, gel, fountain &amp; more</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#daeaf8,#a8ccee)">📋</div>
+        <div class="product-name">Registers</div>
+        <div class="product-desc">Student &amp; professional</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#faefd4,#e8c444)">📐</div>
+        <div class="product-name">Geometry</div>
+        <div class="product-desc">Compass, scale, protractor</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#fce8e8,#f4b4b4)">🎨</div>
+        <div class="product-name">Art &amp; Craft</div>
+        <div class="product-desc">Colors, sheets &amp; supplies</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-wrap" style="background:linear-gradient(135deg,#e2f5e2,#a8dca8)">📁</div>
+        <div class="product-name">School Accessories</div>
+        <div class="product-desc">Clips, folders &amp; more</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATIONERY BRANDS -->
+<section id="stationery-brands" class="bg-white">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow">Trusted Names</div>
+      <h2 class="heading">Stationery Brands We Offer</h2>
+      <div class="divider"></div>
+      <p class="lead">We stock only the best — trusted stationery brands that students and teachers rely on every day.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card"><div class="brand-icon">📓</div><div class="brand-name">Classmate</div><div class="brand-sub">ITC Brand</div></div>
+      <div class="brand-card"><div class="brand-icon">🎨</div><div class="brand-name">Camlin</div><div class="brand-sub">Art &amp; Stationery</div></div>
+      <div class="brand-card"><div class="brand-icon">✏️</div><div class="brand-name">Apsara</div><div class="brand-sub">Pencils &amp; More</div></div>
+      <div class="brand-card"><div class="brand-icon">🖊️</div><div class="brand-name">Nataraj</div><div class="brand-sub">Pens &amp; Pencils</div></div>
+      <div class="brand-card"><div class="brand-icon">📄</div><div class="brand-name">JK Paper</div><div class="brand-sub">Quality Paper</div></div>
+      <div class="brand-card"><div class="brand-icon">🖍️</div><div class="brand-name">Doms</div><div class="brand-sub">Art Supplies</div></div>
+      <div class="brand-card"><div class="brand-icon">🪣</div><div class="brand-name">Pidilite (Fevicol)</div><div class="brand-sub">Adhesives &amp; Craft</div></div>
+      <div class="brand-card"><div class="brand-icon">🖋️</div><div class="brand-name">Artline</div><div class="brand-sub">Markers &amp; Pens</div></div>
+      <div class="brand-card"><div class="brand-icon">📒</div><div class="brand-name">Youva (Navneet)</div><div class="brand-sub">Notebooks &amp; Pads</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publication" class="bg-canvas">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow">Books, Guides &amp; Publications</div>
+      <h2 class="heading">Publications</h2>
+      <div class="divider"></div>
+      <p class="lead">We stock a wide range of books, guides, and publications trusted by students and schools across India — from board textbooks to expert reference titles.</p>
+    </div>
+    <div class="pub-board-cards">
+      <div class="pub-board-card">
+        <div class="pub-board-icon">🟦</div>
+        <div class="pub-board-title">NCERT Books Available</div>
+        <div class="pub-board-desc">Classes 6th to 12th — all subjects</div>
+      </div>
+      <div class="pub-board-card">
+        <div class="pub-board-icon">🟧</div>
+        <div class="pub-board-title">Maharashtra State Board Books</div>
+        <div class="pub-board-desc">Standard board textbooks available</div>
+      </div>
+      <div class="pub-board-card">
+        <div class="pub-board-icon">🟩</div>
+        <div class="pub-board-title">Navneet All Books Available</div>
+        <div class="pub-board-desc">Complete Navneet range for all standards</div>
+      </div>
+    </div>
+    <div class="pub-sep"></div>
+    <div class="pub-sub-label">Popular Guides &amp; Study Books</div>
+    <div class="brand-grid" style="margin-bottom:0">
+      <div class="brand-card"><div class="brand-icon">📘</div><div class="brand-name">Oswaal</div><div class="brand-sub">Question Banks</div></div>
+      <div class="brand-card"><div class="brand-icon">📗</div><div class="brand-name">Golden</div><div class="brand-sub">Study Guides</div></div>
+      <div class="brand-card"><div class="brand-icon">📙</div><div class="brand-name">All in One</div><div class="brand-sub">NCERT Series</div></div>
+      <div class="brand-card"><div class="brand-icon">🎯</div><div class="brand-name">Target</div><div class="brand-sub">Exam Prep</div></div>
+      <div class="brand-card"><div class="brand-icon">📚</div><div class="brand-name">Navneet</div><div class="brand-sub">Digest &amp; Notes</div></div>
+    </div>
+    <div class="pub-sep"></div>
+    <div class="pub-sub-label">Reference Authors &amp; Publishers</div>
+    <div class="brand-grid" style="margin-bottom:0">
+      <div class="brand-card"><div class="brand-icon">📐</div><div class="brand-name">R. D. Sharma</div><div class="brand-sub">Mathematics</div></div>
+      <div class="brand-card"><div class="brand-icon">⚡</div><div class="brand-name">H. C. Verma</div><div class="brand-sub">Physics</div></div>
+      <div class="brand-card"><div class="brand-icon">📚</div><div class="brand-name">Navneet</div><div class="brand-sub">All Subjects</div></div>
+      <div class="brand-card"><div class="brand-icon">🎯</div><div class="brand-name">Target Publications</div><div class="brand-sub">MHT-CET &amp; Boards</div></div>
+      <div class="brand-card"><div class="brand-icon">📘</div><div class="brand-name">Oswaal Books</div><div class="brand-sub">Sample Papers</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NAVNEET -->
+<section id="navneet" class="bg-sky">
+  <div class="wrap">
+    <div class="navneet-wrap">
+      <div class="navneet-icon-box">📚</div>
+      <div class="navneet-body">
+        <div class="eyebrow">Official Stockist</div>
+        <h3>Navneet All Books Available</h3>
+        <p>We provide a complete range of Navneet books for students and schools. Whether you need workbooks, practice papers, or reference guides — we stock Navneet titles across all standards and subjects for Maharashtra curriculum.</p>
+        <div class="navneet-tags">
+          <span class="navneet-tag">All Standards</span>
+          <span class="navneet-tag">All Subjects</span>
+          <span class="navneet-tag">Maharashtra Board</span>
+          <span class="navneet-tag">Workbooks</span>
+          <span class="navneet-tag">Practice Papers</span>
+          <span class="navneet-tag">Activity Books</span>
+        </div>
+        <div class="dist-banner">
+          <span>🏅</span>
+          <p><strong>Official Navneet Distributor</strong> &nbsp;|&nbsp; Supplying books to <strong>300+ schools</strong> in Nagpur</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY -->
+<section id="library" class="bg-canvas">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow">Inside Our Space</div>
+      <h2 class="heading">Library &amp; Reading Hall</h2>
+      <div class="divider"></div>
+      <p class="lead">A quiet and clean space for students to sit and study. Only for reading and learning — a calm, distraction-free environment with private study cubicles, comfortable seating, and full air-conditioning.</p>
+    </div>
+    <div class="lib-gallery">
+      <div class="lib-photo-wrap">
+        <img src="library1.jpeg" alt="Shobha Pustakalay Reading Hall – wide view of study cubicles" class="lib-gallery-img" loading="lazy">
+        <div class="lib-gallery-caption">Study hall — private cubicles with individual seating</div>
+      </div>
+      <div class="lib-photo-wrap">
+        <img src="library2.jpeg" alt="Shobha Pustakalay Reading Hall – cubicle rows from above" class="lib-gallery-img" loading="lazy">
+        <div class="lib-gallery-caption">Spacious reading hall with AC and full lighting</div>
+      </div>
+    </div>
+    <div class="lib-info-grid">
+      <div class="lib-features">
+        <div class="lib-feat-item">
+          <div class="lib-feat-icon">💡</div>
+          <div class="lib-feat-text">Clean, comfortable, and well-lit reading area</div>
+        </div>
+        <div class="lib-feat-item">
+          <div class="lib-feat-icon">🤫</div>
+          <div class="lib-feat-text">Peaceful atmosphere ideal for focused study</div>
+        </div>
+        <div class="lib-feat-item">
+          <div class="lib-feat-icon">📖</div>
+          <div class="lib-feat-text">Only for reading and learning — no disturbance</div>
+        </div>
+        <div class="lib-feat-item">
+          <div class="lib-feat-icon">🎓</div>
+          <div class="lib-feat-text">Welcoming to all students from school &amp; college</div>
+        </div>
+      </div>
+      <div class="lib-timings-box">
+        <div class="lib-timings-label">🕐 Library Timings</div>
+        <div class="lib-tc-row"><span class="lib-tc-day">Monday – Saturday</span><span class="lib-tc-time">7:00 AM – 10:30 PM</span></div>
+        <div class="lib-tc-row"><span class="lib-tc-day">Sunday</span><span class="lib-tc-time">10:00 AM – 10:30 PM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-white">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-visual-icon">🏪</div>
+        <div class="about-visual-caption">Our Shop</div>
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow">Our Story</div>
+        <h2 class="heading">About Shobha Pustakalay</h2>
+        <div class="divider"></div>
+        <p>Shobha Pustakalay &amp; Stationery is a trusted neighbourhood stationery shop located in the heart of Bajrang Nagar, Manewada, Nagpur. We have been serving students, schools, and families with quality stationery products for years.</p>
+        <p>Our mission is simple — to provide everything a student needs under one roof, at one reliable place. From daily-use pens and notebooks to complete Navneet book collections, we are committed to supporting academic excellence in our community.</p>
+        <div class="pillars">
+          <div class="pillar"><div class="pillar-t">🎯 Student First</div><div class="pillar-b">Products chosen for every age and grade</div></div>
+          <div class="pillar"><div class="pillar-t">✅ Trusted Quality</div><div class="pillar-b">Only reliable brands &amp; genuine products</div></div>
+          <div class="pillar"><div class="pillar-t">📍 Conveniently Located</div><div class="pillar-b">Easy to reach in Bajrang Nagar</div></div>
+          <div class="pillar"><div class="pillar-t">🤝 Community Shop</div><div class="pillar-b">Serving our neighbourhood with care</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMINGS -->
+<section id="timings" class="bg-canvas text-center">
+  <div class="wrap">
+    <div class="sec-header center">
+      <div class="eyebrow">Visit Us</div>
+      <h2 class="heading">Shop Timings</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timings-card">
+      <div class="timings-head">
+        <span class="timings-head-icon">🕙</span>
+        <span class="timings-head-title">Working Hours – Shobha Pustakalay</span>
+      </div>
+      <div class="t-row"><span class="t-day">Monday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Tuesday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Wednesday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Thursday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Friday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Saturday</span><span class="t-time">10:00 AM – 9:00 PM</span></div>
+      <div class="t-row"><span class="t-day">Sunday</span><span class="t-closed">Closed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-white">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="eyebrow">Get In Touch</div>
+      <h2 class="heading">Contact Us</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-details">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone / WhatsApp</div>
+            <div class="contact-value"><a href="https://wa.me/919373106365" target="_blank" rel="noopener noreferrer" class="contact-link">9373106365</a></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:shobhapustakalay@gmail.com" class="contact-link">shobhapustakalay@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">Bajrang Nagar, Manewada,<br>Nagpur, Maharashtra</div>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe width="100%" height="260" style="border:0;display:block" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.751057327786!2d79.102900!3d21.113880!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf51fb9ed68d%3A0x112233bb50290db4!2sShobha%20Pustakalay%20And%20Library!5e0!3m2!1sen!2sin!4v1701581345678!5m2!1sen!2sin">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Send Us a Message</div>
+        <div class="form-sub">We'll get back to you as soon as possible.</div>
+        <a href="https://wa.me/919373106365" target="_blank" rel="noopener noreferrer" class="wa-cta">
+          <span class="wa-cta-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          <div class="wa-cta-text">
+            Chat with us on WhatsApp
+            <small>Fastest way to reach us · 9373106365</small>
+          </div>
+        </a>
+        <div class="form-or">
+          <div class="form-or-line"></div>
+          <div class="form-or-text">or send a message</div>
+          <div class="form-or-line"></div>
+        </div>
+        <div class="form-row-2">
+          <div class="field"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+          <div class="field"><label>Phone Number</label><input type="tel" placeholder="Your number"></div>
+        </div>
+        <div class="field"><label>Subject</label><input type="text" placeholder="e.g., Book availability, Library info…"></div>
+        <div class="field"><label>Message</label><textarea placeholder="Write your message here…"></textarea></div>
+        <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-icon">📚</div>
+        <div class="footer-brand-name">Shobha Pustakalay &amp; Stationery</div>
+        <p class="footer-brand-copy">Your trusted neighbourhood stationery shop in Bajrang Nagar, Manewada, Nagpur. Serving students and schools with quality products and a peaceful library space.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#stationery-brands">Brands</a></li>
+          <li><a href="#publication">Publications</a></li>
+          <li><a href="#navneet">Navneet</a></li>
+          <li><a href="#library">Library</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#timings">Timings</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact Info</div>
+        <ul>
+          <li><a href="https://wa.me/919373106365" target="_blank" rel="noopener noreferrer">📞 9373106365 (WhatsApp)</a></li>
+          <li><a href="mailto:shobhapustakalay@gmail.com">✉️ shobhapustakalay@gmail.com</a></li>
+          <li><a href="#contact">📍 Bajrang Nagar, Nagpur</a></li>
+          <li><a href="#timings">🕙 Mon–Sat: 10AM – 9PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Shobha Pustakalay &amp; Stationery. All rights reserved.</span>
+      <span>Made with 📚 for students of Nagpur</span>
+    </div>
+  </div>
+</footer>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  <span class="ib-item"><a href="https://wa.me/919373106365" target="_blank" rel="noopener">📞 9373106365</a></span>
+  <span class="ib-dot"></span>
+  <span class="ib-item">✉️ <a href="mailto:shobhapustakalay@gmail.com">shobhapustakalay@gmail.com</a></span>
+  <span class="ib-dot"></span>
+  <span class="ib-item">📍 Bajrang Nagar, Manewada, Nagpur</span>
+  <span class="ib-dot"></span>
+  <span class="ib-item">🕙 Mon–Sat: 10AM – 9PM</span>
+</div>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919373106365" target="_blank" rel="noopener noreferrer" class="wa-fab" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── MOBILE DRAWER ── */
+  var toggle = document.getElementById('navToggle');
+  var drawer = document.getElementById('navDrawer');
+
+  function openDrawer() {
+    if (!drawer || !toggle) return;
+    drawer.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    var bars = toggle.querySelectorAll('span');
+    if (bars.length === 3) {
+      bars[0].style.cssText = 'transform:translateY(7px) rotate(45deg)';
+      bars[1].style.cssText = 'opacity:0';
+      bars[2].style.cssText = 'transform:translateY(-7px) rotate(-45deg)';
+    }
+  }
+
+  function closeDrawer() {
+    if (!drawer || !toggle) return;
+    drawer.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    var bars = toggle.querySelectorAll('span');
+    if (bars.length === 3) {
+      bars[0].style.cssText = '';
+      bars[1].style.cssText = '';
+      bars[2].style.cssText = '';
+    }
+  }
+
+  window.closeDrawer = closeDrawer;
+
+  if (toggle && drawer) {
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+    drawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeDrawer);
+    });
+    document.addEventListener('click', function (e) {
+      if (drawer.classList.contains('open') && !drawer.contains(e.target) && !toggle.contains(e.target)) closeDrawer();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+  }
+
+  /* ── ACTIVE NAV HIGHLIGHT ── */
+  var secs = document.querySelectorAll('section[id]');
+  var lnks = document.querySelectorAll('.nav-links a');
+
+  function onScroll() {
+    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    var cur = scrollPos < 100 ? 'home' : '';
+    secs.forEach(function (sec) {
+      if (scrollPos >= sec.offsetTop - 100) cur = sec.id;
+    });
+    lnks.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+
+    /* scroll progress bar */
+    var progress = document.getElementById('navProgress');
+    if (progress) {
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = 'scaleX(' + (docH > 0 ? scrollPos / docH : 0) + ')';
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── SCROLL REVEAL ── */
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.product-card, .brand-card, .pub-board-card, .contact-card, .pillar').forEach(function (el, i) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .45s ease ' + (i % 4) * 0.08 + 's, transform .45s ease ' + (i % 4) * 0.08 + 's';
+    observer.observe(el);
+  });
+
+  /* ── FORM SUBMIT ── */
+  window.handleSubmit = function () {
+    var btn = document.querySelector('.form-submit');
+    if (!btn) return;
+    var orig = btn.textContent;
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#1f9e5f';
+    btn.disabled = true;
+    setTimeout(function () {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 3500);
+  };
+
+})();
+</script>
+</body>
+</html>
